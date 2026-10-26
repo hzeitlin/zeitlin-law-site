@@ -1,391 +1,514 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeitlin & Zeitlin | Eminent Domain, Real Estate & Property Rights Counsel</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Playfair Display for authoritative serif headings, Inter for crisp UI -->
+    <title>Zeitlin & Zeitlin, P.C. — Attorneys at Law</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                        sans: ['"Inter"', 'sans-serif'],
-                    },
-                    colors: {
-                        slate: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                            600: '#475569',
-                            500: '#64748b',
-                        },
-                        paper: '#fcfbfa',
-                        cardpaper: '#f8f7f5'
-                    }
-                }
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0A192F;
+            --secondary-navy: #172A45;
+            --accent-gold: #C5A059;
+            --accent-gold-hover: #D4AF37;
+            --text-main: #2C2C2C;
+            --text-muted: #555555;
+            --bg-light: #F8F9FA;
+            --bg-cream: #FDFBF7;
+            --border-color: #E2E8F0;
+            --border-gold: rgba(197, 160, 89, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'EB Garamond', Garamond, Georgia, serif;
+            color: var(--text-main);
+            background-color: var(--bg-cream);
+            line-height: 1.7;
+            font-size: 19px;
+            letter-spacing: 0.01em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-navy);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            border-bottom: 2px solid var(--accent-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 0.08em;
+        }
+
+        .logo-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent-gold);
+            margin-top: 0.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #E2E8F0;
+            position: padding 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            padding: 7rem 2rem 6rem 2rem;
+            text-align: center;
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.98));
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.35rem;
+            color: #CBD5E1;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin: 2rem auto;
+        }
+
+        /* MAIN LAYOUT & SECTIONS */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        section h2 {
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background-color: var(--accent-gold);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* PRACTICE AREAS GRID */
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .practice-card {
+            background: #FFFFFF;
+            padding: 2.5rem;
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--primary-navy);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .practice-card:hover {
+            border-top-color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .practice-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-navy);
+        }
+
+        .practice-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* NOTABLE RESULTS */
+        .results-section {
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            padding: 4rem;
+            margin-top: 3rem;
+        }
+
+        .result-item {
+            display: flex;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            align-items: baseline;
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .result-amount {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            min-width: 180px;
+        }
+
+        .result-desc h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-desc p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* FIRM PROFILE */
+        .profile-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .profile-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .result-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fcfbfa;
-            color: #1e293b;
+
+        .sidebar-box {
+            background-color: var(--primary-navy);
+            color: #FFFFFF;
+            padding: 2.5rem;
+            border-top: 3px solid var(--accent-gold);
         }
-        h1, h2, h3, h4, .font-serif {
-            font-family: 'Playfair Display', Georgia, serif;
+
+        .sidebar-box h3 {
+            color: #FFFFFF;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-box p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #CBD5E1;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            padding: 4rem;
+        }
+
+        .contact-info p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .contact-details div {
+            margin-bottom: 1rem;
+        }
+
+        .contact-details strong {
+            color: var(--primary-navy);
+            display: inline-block;
+            width: 90px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-navy);
+            color: #94A3B8;
+            padding: 3rem 2rem;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            border-top: 2px solid var(--accent-gold);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .disclaimer {
+            font-size: 0.75rem;
+            color: #64748B;
+            max-width: 800px;
+            margin: 1.5rem auto 0 auto;
         }
     </style>
 </head>
-<body class="bg-paper text-slate-800 antialiased selection:bg-slate-900 selection:text-white">
+<body>
 
-    <!-- Modal Notification Box (Custom replacement for alert) -->
-    <div id="custom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-none border border-slate-700/30 p-10 max-w-lg w-full mx-4 shadow-2xl relative">
-            <div class="w-8 h-px bg-slate-900 mb-6"></div>
-            <h3 id="modal-title" class="text-xl font-serif font-semibold text-slate-900 mb-3">Notice</h3>
-            <p id="modal-message" class="text-slate-600 mb-8 leading-relaxed text-sm font-light">Message goes here.</p>
-            <button onclick="closeModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-normal py-3 px-8 transition-colors text-xs uppercase tracking-[0.25em]">
-                Acknowledge
-            </button>
-        </div>
-    </div>
-
-    <!-- Wachtell-Inspired Editorial Header -->
-    <header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-slate-900/10 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-8 h-28 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="group flex flex-col">
-                <span class="font-serif text-2xl md:text-3xl font-medium tracking-[0.05em] text-slate-900">ZEITLIN & ZEITLIN</span>
-                <span class="text-[9px] tracking-[0.35em] uppercase text-slate-500 mt-1 font-mono">Phoenix, Arizona • Est. 1993</span>
-            </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-12">
-                <a href="#firm" class="text-xs uppercase tracking-[0.25em] font-medium text-slate-600 hover:text-slate-900 transition-colors">The Firm</a>
-                <a href="#practice-areas" class="text-xs uppercase tracking-[0.25em] font-medium text-slate-600 hover:text-slate-900 transition-colors">Practice Areas</a>
-                <a href="#track-record" class="text-xs uppercase tracking-[0.25em] font-medium text-slate-600 hover:text-slate-900 transition-colors">Representative Matters</a>
-                <a href="#attorney" class="text-xs uppercase tracking-[0.25em] font-medium text-slate-600 hover:text-slate-900 transition-colors">Principal</a>
-                <a href="#contact" class="text-xs uppercase tracking-[0.25em] font-medium text-slate-900 border-b border-slate-900 pb-1 hover:border-slate-500 transition-colors">Contact</a>
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <span class="logo-title">Zeitlin & Zeitlin</span>
+                <span class="logo-subtitle">Attorneys at Law</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#firm">The Firm</a></li>
+                    <li><a href="#practice">Practice Areas</a></li>
+                    <li><a href="#results">Notable Results</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-
-            <!-- Mobile Menu Button -->
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-900 focus:outline-none" aria-label="Toggle Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-paper border-b border-slate-900/10 px-8 py-8 space-y-6">
-            <a href="#firm" onclick="toggleMobileMenu()" class="block text-xs uppercase tracking-[0.25em] font-medium text-slate-900">The Firm</a>
-            <a href="#practice-areas" onclick="toggleMobileMenu()" class="block text-xs uppercase tracking-[0.25em] font-medium text-slate-900">Practice Areas</a>
-            <a href="#track-record" onclick="toggleMobileMenu()" class="block text-xs uppercase tracking-[0.25em] font-medium text-slate-900">Representative Matters</a>
-            <a href="#attorney" onclick="toggleMobileMenu()" class="block text-xs uppercase tracking-[0.25em] font-medium text-slate-900">Principal</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block text-xs uppercase tracking-[0.25em] font-medium text-slate-900">Contact</a>
         </div>
     </header>
 
-    <!-- Hero Editorial Statement -->
-    <section class="relative pt-24 pb-32 md:pt-36 md:pb-48 border-b border-slate-900/10">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="max-w-4xl">
-                <div class="w-12 h-px bg-slate-900 mb-10"></div>
-                <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-normal text-slate-900 tracking-tight leading-[1.12] mb-10">
-                    Eminent Domain, Real Estate Litigation & Property Rights Counsel.
-                </h1>
-                <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-3xl mb-12">
-                    Established in Phoenix in 1993, Zeitlin & Zeitlin represents property owners, developers, and institutional investors in high-stakes valuation disputes, condemnation proceedings, and complex real estate litigation throughout Arizona. Led by Harry Zeitlin.
-                </p>
-                <div class="flex items-center space-x-8">
-                    <a href="#firm" class="text-xs uppercase tracking-[0.3em] font-medium text-slate-900 border-b border-slate-900 pb-1 hover:text-slate-600 hover:border-slate-600 transition-colors">
-                        Learn About the Firm
-                    </a>
-                    <a href="#contact" class="text-xs uppercase tracking-[0.3em] font-medium text-slate-500 hover:text-slate-900 transition-colors">
-                        Inquiries & Counsel
-                    </a>
-                </div>
-            </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Eminent Domain & Real Estate Litigation</h1>
+            <div class="divider"></div>
+            <p>Established in 1993, Zeitlin & Zeitlin, P.C. provides premier legal representation for property owners and businesses in complex valuation disputes, takings, and commercial real estate litigation in Arizona.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Firm Overview -->
-    <section id="firm" class="py-28 md:py-36 bg-cardpaper border-b border-slate-900/10">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                <div class="lg:col-span-5">
-                    <span class="text-[10px] uppercase tracking-[0.35em] font-mono text-slate-500 block mb-4">Firm Heritage</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-normal text-slate-900 tracking-tight leading-snug">
-                        Decades of Focused Advocacy in Property Rights
-                    </h2>
-                </div>
-                <div class="lg:col-span-7 space-y-6 text-slate-600 font-light leading-relaxed text-base md:text-lg">
-                    <p>
-                        Founded in 1993, Zeitlin & Zeitlin maintains an unwavering dedication to protecting private property and securing constitutional just compensation. Government agencies and municipal authorities frequently undervalue seized property or seek to expand takings beyond statutory authorization. Our firm provides rigorous trial advocacy designed to correct these imbalances.
-                    </p>
-                    <p class="text-sm md:text-base text-slate-700">
-                        Led by Harry Zeitlin, the firm combines deep substantive knowledge of Arizona real estate law with meticulous economic valuation analysis. From pre-condemnation negotiations and administrative hearings to complex jury trials and appellate review, Zeitlin & Zeitlin approaches each matter with uncompromising intellectual rigor and strategic depth.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Practice Areas (Text-Forward Wachtell Style) -->
-    <section id="practice-areas" class="py-28 md:py-36 bg-paper border-b border-slate-900/10">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="mb-20">
-                <span class="text-[10px] uppercase tracking-[0.35em] font-mono text-slate-500 block mb-4">Practice Focus</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-normal text-slate-900 tracking-tight">Areas of Practice</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
-                
-                <!-- 1 -->
-                <div class="border-t border-slate-900/20 pt-8">
-                    <span class="text-[10px] font-mono text-slate-400 tracking-widest block mb-2">01</span>
-                    <h3 class="text-xl font-serif font-medium text-slate-900 mb-4">Eminent Domain & Condemnation</h3>
-                    <p class="text-sm text-slate-600 font-light leading-relaxed">
-                        Representing property owners in valuation disputes and government takings. We challenge improper public use justifications, contest restrictive development freezes, and litigate compensation disputes to ensure full constitutional recovery.
-                    </p>
-                </div>
-
-                <!-- 2 -->
-                <div class="border-t border-slate-900/20 pt-8">
-                    <span class="text-[10px] font-mono text-slate-400 tracking-widest block mb-2">02</span>
-                    <h3 class="text-xl font-serif font-medium text-slate-900 mb-4">Inverse Condemnation & Property Rights</h3>
-                    <p class="text-sm text-slate-600 font-light leading-relaxed">
-                        Defending constitutional property rights against uncompensated regulatory or physical takings by state and municipal authorities, preserving maximum asset value for owners and investors.
-                    </p>
-                </div>
-
-                <!-- 3 -->
-                <div class="border-t border-slate-900/20 pt-8">
-                    <span class="text-[10px] font-mono text-slate-400 tracking-widest block mb-2">03</span>
-                    <h3 class="text-xl font-serif font-medium text-slate-900 mb-4">Appraisal Malpractice & Professional Negligence</h3>
-                    <p class="text-sm text-slate-600 font-light leading-relaxed">
-                        Litigating flawed valuations and appraisal failures on behalf of lenders, investors, and property owners injured by inaccurate, substandard, or negligent real estate appraisals.
-                    </p>
-                </div>
-
-                <!-- 4 -->
-                <div class="border-t border-slate-900/20 pt-8">
-                    <span class="text-[10px] font-mono text-slate-400 tracking-widest block mb-2">04</span>
-                    <h3 class="text-xl font-serif font-medium text-slate-900 mb-4">Commercial Real Estate Transactions & Zoning</h3>
-                    <p class="text-sm text-slate-600 font-light leading-relaxed">
-                        Guiding land development, 1031 exchanges, commercial finance, zoning boards, planning commission hearings, variance applications, and sophisticated acquisitions or dispositions.
-                    </p>
-                </div>
-
-                <!-- 5 -->
-                <div class="border-t border-slate-900/20 pt-8">
-                    <span class="text-[10px] font-mono text-slate-400 tracking-widest block mb-2">05</span>
-                    <h3 class="text-xl font-serif font-medium text-slate-900 mb-4">Deficiency & Real Estate Litigation</h3>
-                    <p class="text-sm text-slate-600 font-light leading-relaxed">
-                        Advising and litigating complex financial and debtor-creditor disputes, deficiency balance actions, fair market value offsets, and guarantor liability following trustee sales under Arizona statutory frameworks.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Representative Matters & Case Results -->
-    <section id="track-record" class="py-28 md:py-36 bg-cardpaper border-b border-slate-900/10">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="mb-20">
-                <span class="text-[10px] uppercase tracking-[0.35em] font-mono text-slate-500 block mb-4">Track Record</span>
-                <h2 class="text-3xl md:text-5xl font-serif font-normal text-slate-900 tracking-tight">Representative Matters</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                
-                <!-- Matter 1 -->
-                <div class="bg-white p-10 border border-slate-900/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest font-mono text-slate-500 block mb-3">Trial Verdict</span>
-                        <div class="text-4xl font-serif font-normal text-slate-900 mb-4">$82 Million</div>
-                        <p class="text-sm text-slate-600 font-light leading-relaxed mb-6">
-                            Secured a landmark jury award in a major land valuation / eminent domain dispute, successfully proving that the condemning authority's initial valuation severely understated true property worth.
-                        </p>
-                    </div>
-                    <span class="text-xs font-mono text-slate-400">Condemnation Litigation • Arizona</span>
-                </div>
-
-                <!-- Matter 2 -->
-                <div class="bg-white p-10 border border-slate-900/10 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] uppercase tracking-widest font-mono text-slate-500 block mb-3">Inverse Condemnation Settlement</span>
-                        <div class="text-4xl font-serif font-normal text-slate-900 mb-4">$12 Million</div>
-                        <p class="text-sm text-slate-600 font-light leading-relaxed mb-6">
-                            Protected private property rights and compelled a substantial settlement after the government agency initially took the position that the subject land held zero compensable value due to regulatory restrictions.
-                        </p>
-                    </div>
-                    <span class="text-xs font-mono text-slate-400">Property Rights • Phoenix</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Attorney / Principal Section -->
-    <section id="attorney" class="py-28 md:py-36 bg-paper border-b border-slate-900/10">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                <div class="lg:col-span-5">
-                    <span class="text-[10px] uppercase tracking-[0.35em] font-mono text-slate-500 block mb-4">Leadership</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-normal text-slate-900 tracking-tight leading-snug">
-                        Harry Zeitlin
-                    </h2>
-                    <span class="text-xs font-mono text-slate-500 uppercase tracking-widest block mt-2">Principal Counsel</span>
-                </div>
-                <div class="lg:col-span-7 space-y-6 text-slate-600 font-light leading-relaxed text-base md:text-lg">
-                    <p>
-                        Harry Zeitlin is the founding principal of Zeitlin & Zeitlin, bringing decades of distinguished trial experience in eminent domain, inverse condemnation, appraisal malpractice, and complex real estate litigation across Arizona.
-                    </p>
-                    <p class="text-sm md:text-base text-slate-700">
-                        Mr. Zeitlin has dedicated his career to safeguarding the constitutional rights of property owners and investors against government overreach and valuation discrepancies. He is recognized for his rigorous analytical approach, courtroom advocacy, and extensive contributions to property rights jurisprudence.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-28 md:py-36 bg-cardpaper">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-                
-                <div class="lg:col-span-5">
-                    <span class="text-[10px] uppercase tracking-[0.35em] font-mono text-slate-500 block mb-4">Direct Counsel</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-normal text-slate-900 tracking-tight mb-8">
-                        Contact the Firm
-                    </h2>
-                    <p class="text-slate-600 text-sm leading-relaxed font-light mb-10">
-                        Inquiries regarding eminent domain matters, real estate litigation, or appraisal disputes may be directed to our Phoenix office.
-                    </p>
-
-                    <div class="space-y-6 text-sm text-slate-700">
-                        <div>
-                            <strong class="font-serif block text-slate-900 text-base mb-1">Office Address</strong>
-                            5050 North 40th Street, Suite 380<br>Phoenix, AZ 85018
-                        </div>
-                        <div>
-                            <strong class="font-serif block text-slate-900 text-base mb-1">Telephone & Electronic Mail</strong>
-                            Telephone: (602) 274-2500<br>Email: info@zeitlinlaw.com
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 bg-white p-10 border border-slate-900/10">
-                    <form onsubmit="handleFormSubmit(event)" class="space-y-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-[10px] uppercase tracking-widest font-mono text-slate-500 mb-2">Full Name *</label>
-                                <input type="text" required class="w-full bg-paper border border-slate-900/20 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-slate-900 transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-[10px] uppercase tracking-widest font-mono text-slate-500 mb-2">Telephone *</label>
-                                <input type="tel" required class="w-full bg-paper border border-slate-900/20 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-slate-900 transition-colors">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-widest font-mono text-slate-500 mb-2">Email Address *</label>
-                            <input type="email" required class="w-full bg-paper border border-slate-900/20 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-slate-900 transition-colors">
-                        </div>
-
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-widest font-mono text-slate-500 mb-2">Matter Category</label>
-                            <select class="w-full bg-paper border border-slate-900/20 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-slate-900 transition-colors">
-                                <option>Eminent Domain & Condemnation</option>
-                                <option>Inverse Condemnation & Property Rights</option>
-                                <option>Appraisal Malpractice & Professional Negligence</option>
-                                <option>Commercial Real Estate Transactions & Zoning</option>
-                                <option>Deficiency & Real Estate Litigation</option>
-                                <option>Other Legal Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-widest font-mono text-slate-500 mb-2">Matter Summary *</label>
-                            <textarea rows="4" required class="w-full bg-paper border border-slate-900/20 px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-slate-900 transition-colors" placeholder="Provide a brief summary of the legal matter..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs uppercase tracking-[0.25em] font-medium py-4 transition-colors">
-                            Submit Confidential Inquiry
-                        </button>
-                        <p class="text-[10px] text-slate-500 text-center tracking-wide font-light">
-                            Communication through this form does not establish an attorney-client relationship. All inquiries remain strictly confidential.
-                        </p>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-12 border-b border-slate-800 space-y-6 md:space-y-0">
+    <main>
+        <!-- FIRM OVERVIEW -->
+        <section id="firm">
+            <h2>Established Excellence in Property Rights</h2>
+            <div class="profile-content">
                 <div>
-                    <span class="font-serif text-2xl font-normal tracking-wide text-white block mb-2">ZEITLIN & ZEITLIN</span>
-                    <p class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Eminent Domain & Real Estate Litigation Counsel • Est. 1993</p>
+                    <p>Zeitlin & Zeitlin, P.C. is an eminent domain and real estate litigation practice established in Phoenix, Arizona. For over three decades, the firm has focused exclusively on protecting the constitutional and property rights of landowners, business owners, and investors facing condemnation, inverse condemnation, and severe regulatory takings.</p>
+                    <p>Led by Dale S. Zeitlin and Dawn Zeitlin, the firm combines meticulous trial preparation with deep substantive knowledge of property valuation, appraisal methodology, and land use regulations. When government agencies or condemning authorities seek to acquire private property or impair access, Zeitlin & Zeitlin delivers uncompromising advocacy to secure just compensation.</p>
                 </div>
-                <div class="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.25em] font-mono text-slate-400">
-                    <a href="#firm" class="hover:text-white transition-colors">The Firm</a>
-                    <a href="#practice-areas" class="hover:text-white transition-colors">Practice Areas</a>
-                    <a href="#track-record" class="hover:text-white transition-colors">Representative Matters</a>
-                    <a href="#attorney" class="hover:text-white transition-colors">Principal</a>
-                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                <div class="sidebar-box">
+                    <h3>Firm Headquarters</h3>
+                    <p>Phoenix, Arizona<br>Serving clients statewide across all Arizona counties and municipalities.</p>
+                    <h3 style="margin-top: 1.5rem;">Practice Focus</h3>
+                    <p>Eminent Domain, Inverse Condemnation, Appraisal Malpractice, Deficiency Litigation, and Commercial Real Estate Disputes.</p>
                 </div>
             </div>
-            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-500 font-mono space-y-4 md:space-y-0">
-                <p>&copy; 1993–2026 Zeitlin & Zeitlin. All Rights Reserved. 5050 North 40th Street, Suite 380, Phoenix, AZ 85018.</p>
-                <p>Editorial legal design.</p>
+        </section>
+
+        <!-- PRACTICE AREAS -->
+        <section id="practice">
+            <h2>Areas of Practice</h2>
+            <p>Our practice is dedicated to specialized litigation involving real estate valuation, property rights, and complex commercial disputes.</p>
+            
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <h3>Eminent Domain & Condemnation</h3>
+                    <p>Representing property owners when government entities seek to condemn or acquire private land for public projects, ensuring maximum recovery of just compensation and damages to the remainder.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Inverse Condemnation</h3>
+                    <p>Litigating on behalf of owners whose property has been taken, damaged, or severely restricted in utility by government action without formal condemnation proceedings.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Appraisal Malpractice</h3>
+                    <p>Prosecuting claims against negligent or deficient real property appraisers whose professional errors result in financial harm or compromised transaction valuations.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Deficiency Litigation</h3>
+                    <p>Defending borrowers and guarantors in commercial deficiency litigation and contesting inflated or improper lender valuations following foreclosure.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Zoning & Land Use Disputes</h3>
+                    <p>Navigating complex zoning challenges, regulatory hurdles, and municipal land use disputes affecting commercial development and property rights.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Commercial Real Estate Transactions</h3>
+                    <p>Structuring, negotiating, and executing sophisticated commercial real estate transactions, acquisitions, and asset protection strategies.</p>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- NOTABLE RESULTS -->
+        <section id="results">
+            <h2>Representative Case Results</h2>
+            <p>Our firm has secured landmark recoveries and verdicts in high-stakes valuation and property rights disputes across Arizona.</p>
+            
+            <div class="results-section">
+                <div class="result-item">
+                    <div class="result-amount">$82,000,000</div>
+                    <div class="result-desc">
+                        <h4>Condemnation Valuation Jury Award</h4>
+                        <p>Secured an $82 million jury verdict in a major eminent domain valuation dispute representing commercial property owners against condemning authorities.</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-amount">$15,800,000</div>
+                    <div class="result-desc">
+                        <h4>Eminent Domain Settlement</h4>
+                        <p>Achieved a $15.8 million settlement resolving complex valuation, severance damages, and highest-and-best use contentions.</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-amount">$12,000,000</div>
+                    <div class="result-desc">
+                        <h4>Inverse Condemnation Recovery</h4>
+                        <p>Recovered $12 million in an inverse condemnation settlement for property owners impacted by municipal infrastructure actions.</p>
+                    </div>
+                </div>
+                <div class="result-item">
+                    <div class="result-amount">$2,900,000</div>
+                    <div class="result-desc">
+                        <h4>Loss of Access Jury Award</h4>
+                        <p>Secured a nearly $3 million jury verdict for commercial business owners suffering severe economic damages due to impaired highway access.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" style="margin-bottom: 0;">
+            <h2>Contact the Firm</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>If your property rights are being threatened by government acquisition, eminent domain, or complex real estate litigation, contact Zeitlin & Zeitlin, P.C. to discuss your case with experienced trial counsel.</p>
+                    <div class="contact-details">
+                        <div><strong>Firm:</strong> Zeitlin & Zeitlin, P.C.</div>
+                        <div><strong>Location:</strong> Phoenix, Arizona</div>
+                        <div><strong>Focus:</strong> Eminent Domain & Real Estate Litigation</div>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                        Initial inquiries regarding potential eminent domain and commercial real estate litigation matters may be directed to our firm offices.
+                    </p>
+                    <div style="background-color: var(--bg-light); padding: 2rem; border: 1px solid var(--border-color);">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Professional Representation</h4>
+                        <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">
+                            Committed to uncompromising advocacy and the defense of constitutional property rights since 1993.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 1993–2026 Zeitlin & Zeitlin, P.C. All rights reserved.</p>
+        <p class="disclaimer">The information presented on this website is for informational purposes only and does not constitute legal advice. Viewing this site does not form an attorney-client relationship. Past performance is no guarantee of future results.</p>
     </footer>
 
-    <!-- Interactive Script -->
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        function openModal(title, message) {
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-message').innerText = message;
-            const modal = document.getElementById('custom-modal');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-            }, 10);
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('custom-modal');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            openModal('Inquiry Received', 'Thank you for contacting Zeitlin & Zeitlin. Your confidential inquiry has been successfully transmitted to our legal team for review.');
-            event.target.reset();
-        }
-    </script>
 </body>
 </html>
