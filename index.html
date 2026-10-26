@@ -155,3 +155,148 @@
             margin-bottom: 0.2rem;
             color: var(--text-color);
         }
+
+        .practice-item span {
+            color: var(--muted-gray);
+            line-height: 1.4;
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--text-color);
+            max-width: 800px;
+            margin: 4rem auto 0 auto;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            color: var(--muted-gray);
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .practice-list {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="firm-logo">Zeitlin & Zeitlin, P.C.</div>
+        <div class="firm-location">Phoenix, Arizona</div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#firm">The Firm</a></li>
+            <li><a href="#practice">Practice</a></li>
+            <li><a href="#results">Representative Matters</a></li>
+            <li><a href="#attorneys">Attorneys</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- FIRM OVERVIEW -->
+        <section id="firm">
+            <h2>Overview</h2>
+            <p>Zeitlin & Zeitlin, P.C. is an eminent domain and real estate litigation practice established in Phoenix, Arizona in 1993. The firm provides premier legal representation for property owners, businesses, and investors in complex valuation disputes, condemnation, inverse condemnation, and commercial real estate litigation.</p>
+            <p>Combining rigorous trial preparation with deep substantive knowledge of property valuation, appraisal methodology, and land use regulations, Zeitlin & Zeitlin delivers uncompromising advocacy to secure just compensation.</p>
+        </section>
+
+        <!-- REPRESENTATIVE MATTERS / RESULTS -->
+        <section id="results">
+            <h2>Representative Matters & Verdicts</h2>
+            
+            <div class="feed-item">
+                <div class="feed-title">$82,000,000 Condemnation Jury Award</div>
+                <div class="feed-snippet">Secured an $82 million jury verdict in a major eminent domain valuation dispute representing commercial property owners against condemning authorities.</div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-title">$15,800,000 Eminent Domain Settlement</div>
+                <div class="feed-snippet">Achieved a $15.8 million settlement resolving complex valuation, severance damages, and highest-and-best use contentions.</div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-title">$12,000,000 Inverse Condemnation Recovery</div>
+                <div class="feed-snippet">Recovered $12 million in an inverse condemnation settlement for property owners impacted by municipal infrastructure actions.</div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-title">$2,900,000 Loss of Access Jury Award</div>
+                <div class="feed-snippet">Secured a nearly $3 million jury verdict for commercial business owners suffering severe economic damages due to impaired highway access.</div>
+            </div>
+        </section>
+
+        <!-- PRACTICE AREAS -->
+        <section id="practice">
+            <h2>Practice Areas</h2>
+            <div class="practice-list">
+                <div class="practice-item">
+                    <strong>Eminent Domain & Condemnation</strong>
+                    <span>Protecting landowners against government land acquisitions and seeking maximum just compensation.</span>
+                </div>
+                <div class="practice-item">
+                    <strong>Inverse Condemnation</strong>
+                    <span>Litigating uncompensated property takings and regulatory restrictions caused by public projects.</span>
+                </div>
+                <div class="practice-item">
+                    <strong>Appraisal Malpractice</strong>
+                    <span>Prosecuting negligent real property evaluations resulting in financial damage.</span>
+                </div>
+                <div class="practice-item">
+                    <strong>Deficiency Litigation</strong>
+                    <span>Defending commercial borrowers and guarantors against inflated post-foreclosure claims.</span>
+                </div>
+                <div class="practice-item">
+                    <strong>Zoning & Land Use</strong>
+                    <span>Navigating municipal regulatory disputes and commercial development hurdles.</span>
+                </div>
+                <div class="practice-item">
+                    <strong>Commercial Real Estate</strong>
+                    <span>Structuring sophisticated commercial transactions and asset protection strategies.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATTORNEYS -->
+        <section id="attorneys">
+            <h2>Attorneys</h2>
+            <div class="feed-item">
+                <div class="feed-title">Dale S. Zeitlin</div>
+                <div class="feed-snippet">Founding Principal with decades of specialized courtroom experience representing landowners and investors in complex eminent domain, condemnation, and valuation litigation across Arizona.</div>
+            </div>
+            <div class="feed-item">
+                <div class="feed-title">Dawn Zeitlin</div>
+                <div class="feed-snippet">Practicing in property rights advocacy, real estate litigation, and valuation disputes, dedicated to defending the constitutional rights of property owners and commercial enterprises.</div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" style="margin-bottom: 0;">
+            <h2>Contact</h2>
+            <p>Zeitlin & Zeitlin, P.C.<br>Phoenix, Arizona</p>
+            <p class="feed-snippet">Initial inquiries regarding potential eminent domain and commercial real estate litigation matters may be directed to our firm offices.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 1993–2026 Zeitlin & Zeitlin, P.C. All rights reserved.</p>
+        <p>Attorney Advertising. The information presented on this website is for informational purposes only and does not constitute legal advice.</p>
+    </footer>
+
+</body>
+</html>
