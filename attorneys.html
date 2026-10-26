@@ -33,8 +33,8 @@
         p { margin-bottom: 1.2rem; text-align: left; }
 
         .bio-container { 
-            margin-bottom: 3.5rem; 
-            padding-bottom: 3.5rem; 
+            margin-bottom: 4rem; 
+            padding-bottom: 4rem; 
             border-bottom: 1px solid #E5E5E5; 
         }
         .bio-container:last-child { 
@@ -57,22 +57,19 @@
             color: var(--wachtell-muted); 
             margin-bottom: 1.5rem; 
         }
-        .bio-snippet { 
-            font-family: 'Inter', sans-serif; 
-            font-size: 0.9rem; 
-            color: var(--wachtell-muted); 
-            line-height: 1.6; 
-        }
         .bio-credentials {
             font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
-            color: var(--wachtell-dark);
+            color: var(--wachtell-muted);
             background: var(--wachtell-light-bg);
             border-left: 2px solid var(--wachtell-dark);
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.2rem;
             margin-top: 1.5rem;
-            line-height: 1.5;
+            line-height: 1.6;
         }
+        .bio-credentials strong { color: var(--wachtell-dark); font-weight: 600; }
+        .credential-row { margin-bottom: 0.4rem; }
+        .credential-row:last-child { margin-bottom: 0; }
 
         footer { border-top: 1px solid var(--wachtell-border); max-width: 820px; margin: 4rem auto 0 auto; padding: 2.5rem 1.5rem; text-align: center; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--wachtell-muted); background: var(--wachtell-light-bg); }
         footer p { text-align: center; margin-bottom: 0.5rem; }
@@ -97,3 +94,43 @@
 
     <main>
         <section>
+            <h2>Firm Leadership & Counsel</h2>
+            
+            <p style="margin-bottom: 3.5rem;">Zeitlin & Zeitlin, P.C. was established in 1993 in Phoenix, Arizona, by Dale Zeitlin and Dawn Zeitlin, together with another attorney, James M. Balogh, who associates with the firm on an of counsel basis.</p>
+
+            <!-- DALE S. ZEITLIN -->
+            <div class="bio-container">
+                <div class="bio-name">Dale S. Zeitlin</div>
+                <div class="bio-title">Founding Principal</div>
+                
+                <p>Dale Zeitlin has extensive experience in eminent domain and valuation litigation in Arizona, Maryland, the District of Columbia, and California. He specializes in representing property owners who are being deprived of their property rights through condemnation or eminent domain and in other disputes over the valuation and taking of real property, including litigation over the value of real property in deficiency actions and in appraisal malpractice cases.</p>
+                
+                <div class="bio-credentials">
+                    <div class="credential-row"><strong>Education:</strong> J.D., Arizona State University, Cum Laude, 1980; B.A., Stanford University, 1977.</div>
+                    <div class="credential-row"><strong>Courts:</strong> Arizona Superior Court, Arizona District Court, Arizona Court of Appeals, United States District Courts (Arizona, District of Columbia, Maryland).</div>
+                    <div class="credential-row"><strong>Bar Associations:</strong> State Bar of Arizona, State Bar of Maryland, American Bar Association (Litigation Law Section), Maricopa County Bar Association.</div>
+                </div>
+            </div>
+
+            <!-- DAWN ZEITLIN -->
+            <div class="bio-container">
+                <div class="bio-name">Dawn Zeitlin</div>
+                <div class="bio-title">Attorney at Law</div>
+                
+                <p>Dawn Zeitlin has experience in all aspects of commercial real estate transactions. She has focused her practice on acquisition and sale of property since 1993, representing both buyers and sellers. Dawn Zeitlin handles acquisition and sale of improved and unimproved real property from the beginning of a transaction at the negotiation and contracting stage, through due diligence and the closing of a sale or purchase. She also represents buyers on financing real property acquisitions.</p>
+                
+                <div class="bio-credentials">
+                    <div class="credential-row"><strong>Education:</strong> J.D., Arizona State University, 1980; B.S., Arizona State University, 1976.</div>
+                    <div class="credential-row"><strong>Bar Associations:</strong> State Bar of Arizona, Maricopa County Bar Association.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 1993–2026 Zeitlin & Zeitlin, P.C. All rights reserved.</p>
+        <p>Attorney Advertising. The information presented on this website is for informational purposes only and does not constitute legal advice.</p>
+    </footer>
+
+</body>
+</html>
