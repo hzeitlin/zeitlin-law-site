@@ -28,52 +28,12 @@
         .nav-links a.active { font-weight: 600; text-decoration: underline; }
 
         main { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem 5rem 1.5rem; }
-        section { margin-bottom: 5rem; }
+        section { margin-bottom: 4rem; }
         h2 { font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--wachtell-muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--wachtell-border); padding-bottom: 0.4rem; }
         p { margin-bottom: 1.2rem; text-align: left; }
 
-        .contact-box { background-color: var(--wachtell-light-bg); padding: 3rem; border: 1px solid var(--wachtell-border); margin-top: 2rem; font-family: 'Inter', sans-serif; }
-        .contact-box h3 { font-family: 'EB Garamond', serif; font-size: 1.4rem; color: var(--wachtell-dark); margin-bottom: 1rem; }
-        .contact-box p { font-size: 0.95rem; color: var(--wachtell-muted); line-height: 1.6; margin-bottom: 1rem; }
-
-        footer { border-top: 1px solid var(--wachtell-border); max-width: 820px; margin: 4rem auto 0 auto; padding: 2.5rem 1.5rem; text-align: center; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--wachtell-muted); background: var(--wachtell-light-bg); }
-        footer p { text-align: center; margin-bottom: 0.5rem; }
-        @media (max-width: 768px) { .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; } }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="firm-logo">Zeitlin & Zeitlin, P.C.</div>
-        <div class="firm-location">Phoenix, Arizona</div>
-    </header>
-
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="practice.html">Practice Areas</a></li>
-            <li><a href="attorneys.html">Attorneys</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section>
-            <h2>Office & Inquiries</h2>
-            <p>If your property rights are being threatened by government acquisition, eminent domain, or complex real estate litigation, contact Zeitlin & Zeitlin, P.C. to discuss your matter with experienced trial counsel.</p>
-            
-            <div class="contact-box">
-                <h3>Zeitlin & Zeitlin, P.C.</h3>
-                <p><strong>Location:</strong> Phoenix, Arizona<br>Serving clients statewide across all Arizona counties and municipalities.</p>
-                <p style="margin-bottom: 0;">Initial inquiries regarding potential eminent domain, condemnation, and commercial real estate litigation matters may be directed to our firm offices.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 1993–2026 Zeitlin & Zeitlin, P.C. All rights reserved.</p>
-        <p>Attorney Advertising. The information presented on this website is for informational purposes only and does not constitute legal advice.</p>
-    </footer>
-
-</body>
-</html>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
