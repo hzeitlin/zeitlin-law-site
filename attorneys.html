@@ -8,6 +8,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific structural tuning for attorney bios */
+        .bio-section-intro {
+            margin-bottom: 3.5rem;
+            font-size: 1.05rem;
+        }
+        .bio-wrapper {
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--wachtell-border);
+        }
+        .bio-wrapper:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .bio-header-group {
+            margin-bottom: 1.5rem;
+        }
+        .bio-credentials {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            color: var(--wachtell-muted);
+            line-height: 1.6;
+            margin-top: 1.2rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--wachtell-border);
+        }
+        .bio-credentials strong {
+            color: var(--wachtell-dark);
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,28 +62,30 @@
         <section>
             <h2>Firm Leadership & Counsel</h2>
             
-            <p style="margin-bottom: 3rem;">Zeitlin & Zeitlin, P.C. was established in 1993 in Phoenix, Arizona, by Dale Zeitlin and Dawn Zeitlin, building a specialized practice dedicated to property rights, eminent domain, valuation disputes, and complex real estate litigation.</p>
+            <p class="bio-section-intro">Zeitlin & Zeitlin, P.C. was established in 1993 in Phoenix, Arizona, by Dale Zeitlin and Dawn Zeitlin, building a specialized practice dedicated to property rights, eminent domain, valuation disputes, and complex real estate litigation.</p>
 
-            <div class="bio-container">
-                <div class="bio-name">Dale S. Zeitlin</div>
-                <div class="bio-title">Founding Principal</div>
+            <!-- DALE S. ZEITLIN -->
+            <div class="bio-wrapper">
+                <div class="bio-header-group">
+                    <div class="bio-name">Dale S. Zeitlin</div>
+                    <div class="bio-title">Founding Principal</div>
+                </div>
+                
                 <p>Dale S. Zeitlin is the founding principal of Zeitlin & Zeitlin, P.C., bringing decades of specialized courtroom experience representing property owners, businesses, and investors in high-stakes condemnation and valuation trials across Arizona and nationwide.</p>
-                <p class="bio-snippet">Mr. Zeitlin has secured some of the most significant jury verdicts and recoveries in the history of Arizona eminent domain law—including the landmark $82 million jury award in <em>Scottsdale v. Toll Brothers</em> and a $12 million inverse condemnation recovery in <em>Arizona v. Benross</em>. His practice focuses entirely on protecting landowners and commercial entities against government takings, regulatory overreach, and appraisal malpractice.</p>
+                
+                <p>Mr. Zeitlin has secured some of the most significant jury verdicts and recoveries in the history of eminent domain law—including the landmark $82 million jury award in <em>Scottsdale v. Toll Brothers</em> and a $12 million inverse condemnation recovery in <em>Arizona v. Benross</em>. His practice focuses entirely on protecting landowners and commercial entities against government takings, regulatory overreach, and appraisal malpractice.</p>
+                
+                <div class="bio-credentials">
+                    <div><strong>Education:</strong> Legal education and advanced professional training specializing in trial advocacy and real property valuation.</div>
+                    <div style="margin-top: 0.4rem;"><strong>Admissions:</strong> State Bar of Arizona; United States District Court; appellate and federal trial courts.</div>
+                </div>
             </div>
 
-            <div class="bio-container">
-                <div class="bio-name">Dawn Zeitlin</div>
-                <div class="bio-title">Attorney at Law</div>
-                <p>Dawn Zeitlin is a founding member of Zeitlin & Zeitlin, P.C., practicing in property rights advocacy, commercial real estate litigation, and valuation disputes since the firm's establishment in 1993.</p>
-                <p class="bio-snippet">Ms. Zeitlin works extensively on behalf of property owners, developers, and commercial enterprises navigating complex government acquisitions, inverse condemnation actions, and land use disputes. Her meticulous trial preparation and deep understanding of real estate valuation ensure that clients receive uncompromised advocacy and just compensation under the law.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 1993–2026 Zeitlin & Zeitlin, P.C. All rights reserved.</p>
-        <p>Attorney Advertising. The information presented on this website is for informational purposes only and does not constitute legal advice.</p>
-    </footer>
-
-</body>
-</html>
+            <!-- DAWN ZEITLIN -->
+            <div class="bio-wrapper">
+                <div class="bio-header-group">
+                    <div class="bio-name">Dawn Zeitlin</div>
+                    <div class="bio-title">Attorney at Law</div>
+                </div>
+                
+                <p>Dawn Zeit
