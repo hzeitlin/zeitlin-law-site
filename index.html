@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeitlin & Zeitlin, P.C. — Attorneys at Law</title>
+    <title>Zeitlin & Zeitlin, P.C.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --wachtell-navy: #0F1E36;
-            --wachtell-gold: #C5A059;
-            --wachtell-charcoal: #1A1A1A;
-            --wachtell-gray: #666666;
-            --wachtell-light-bg: #F4F5F7;
-            --wachtell-border: #D1D5DB;
+            --text-color: #111111;
+            --muted-gray: #555555;
+            --light-border: #E0E0E0;
+            --accent-dark: #0A192F;
         }
 
         * {
@@ -25,39 +23,135 @@
 
         body {
             font-family: 'EB Garamond', Garamond, Georgia, serif;
-            color: var(--wachtell-charcoal);
+            color: var(--text-color);
             background-color: #FFFFFF;
-            line-height: 1.8;
-            font-size: 20px;
+            line-height: 1.6;
+            font-size: 19px;
         }
 
-        /* TOP BRANDING BAR */
-        .masthead {
-            background-color: var(--wachtell-navy);
-            color: #FFFFFF;
-            border-bottom: 3px solid var(--wachtell-gold);
-            padding: 2.5rem 0;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* WACHTELL STYLE HEADER */
+        header {
             text-align: center;
+            padding: 3.5rem 1rem 2rem 1rem;
+            background: #FFFFFF;
         }
 
-        .masthead h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
+        .firm-logo {
+            font-family: 'EB Garamond', serif;
+            font-size: 2.2rem;
             font-weight: 600;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.05em;
+            color: var(--text-color);
+            text-transform: uppercase;
             margin-bottom: 0.3rem;
-            color: #FFFFFF;
         }
 
-        .masthead p {
+        .firm-location {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--muted-gray);
+        }
+
+        /* TEXT NAVIGATION BAR */
+        nav {
+            border-top: 1px solid var(--text-color);
+            border-bottom: 1px solid var(--text-color);
+            margin: 1.5rem auto;
+            max-width: 900px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2.5rem;
+            padding: 0.75rem 1rem;
             font-family: 'Inter', sans-serif;
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--wachtell-gold);
+            letter-spacing: 0.15em;
         }
 
-        /* NAVIGATION BAR */
-        nav {
-            background-color: #FFFFFF;
-            border-bottom: 1px solid var(--wachtell-border);
+        .nav-links a:hover {
+            color: var(--muted-gray);
+        }
+
+        /* MAIN EDITORIAL FEED CONTAINER */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 5rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--muted-gray);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-border);
+            padding-bottom: 0.4rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        /* FEED ITEMS (Wachtell style news/updates stream) */
+        .feed-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--light-border);
+        }
+
+        .feed-item:last-child {
+            border-bottom: none;
+        }
+
+        .feed-title {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .feed-snippet {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--muted-gray);
+            line-height: 1.5;
+        }
+
+        /* PRACTICE LIST */
+        .practice-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 3rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .practice-item strong {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.15rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            color: var(--text-color);
+        }
