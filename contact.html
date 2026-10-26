@@ -32,15 +32,16 @@
         h2 { font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--wachtell-muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--wachtell-border); padding-bottom: 0.4rem; }
         p { margin-bottom: 1.2rem; text-align: left; }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
+        .contact-details-container {
+            margin-top: 2.5rem;
+            padding: 2.5rem;
+            background: var(--wachtell-light-bg);
+            border: 1px solid var(--wachtell-border);
+            border-top: 2px solid var(--wachtell-dark);
         }
         .contact-info-block {
             font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--wachtell-muted);
             line-height: 1.8;
         }
@@ -48,68 +49,24 @@
             color: var(--wachtell-dark);
             font-weight: 600;
             display: block;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.3rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             font-size: 0.75rem;
         }
         .contact-info-item {
             margin-bottom: 2rem;
         }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-label {
-            display: block;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--wachtell-muted);
-            margin-bottom: 0.5rem;
-        }
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 0.75rem;
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 1rem;
-            color: var(--wachtell-dark);
-            border: 1px solid var(--wachtell-border);
-            background: #FFFFFF;
-            border-radius: 0;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .form-input:focus, .form-textarea:focus {
-            border-color: var(--wachtell-dark);
-        }
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        .submit-btn {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            background: var(--wachtell-dark);
-            color: #FFFFFF;
-            padding: 0.9rem 2rem;
-            border: none;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .submit-btn:hover {
-            background: var(--wachtell-muted);
+        .contact-info-item:last-child {
+            margin-bottom: 0;
         }
 
         footer { border-top: 1px solid var(--wachtell-border); max-width: 820px; margin: 4rem auto 0 auto; padding: 2.5rem 1.5rem; text-align: center; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--wachtell-muted); background: var(--wachtell-light-bg); }
         footer p { text-align: center; margin-bottom: 0.5rem; }
 
         @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .contact-details-container { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -132,9 +89,9 @@
     <main>
         <section>
             <h2>Inquiries & Counsel</h2>
-            <p>Prospective clients, co-counsel inquiries, and property owners seeking representation in eminent domain or commercial real estate valuation disputes may contact the firm directly or submit an inquiry below.</p>
+            <p>Property owners, commercial entities, and co-counsel seeking representation in eminent domain, inverse condemnation, or real estate valuation disputes may contact the firm directly using the information below.</p>
 
-            <div class="contact-grid">
+            <div class="contact-details-container">
                 <div class="contact-info-block">
                     <div class="contact-info-item">
                         <strong>Firm Office</strong>
@@ -149,32 +106,6 @@
                         <strong>Practice Focus</strong>
                         Eminent Domain, Condemnation, Commercial Real Estate Transactions & Valuation Litigation
                     </div>
-                </div>
-
-                <div>
-                    <form action="https://formspree.io/f/your-form-id" method="POST">
-                        <div class="form-group">
-                            <label class="form-label" for="name">Full Name</label>
-                            <input class="form-input" type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="email">Email Address</label>
-                            <input class="form-input" type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label" for="phone">Phone Number</label>
-                            <input class="form-input" type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="message">Nature of Inquiry</label>
-                            <textarea class="form-textarea" id="message" name="message" required></textarea>
-                        </div>
-
-                        <button class="submit-btn" type="submit">Send Inquiry</button>
-                    </form>
                 </div>
             </div>
         </section>
