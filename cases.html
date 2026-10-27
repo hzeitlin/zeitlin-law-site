@@ -3,517 +3,566 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notable Cases & Verdicts | Zeitlin & Zeitlin, P.C.</title>
-    <!-- Google Fonts & Tailwind CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Notable Cases & Verdicts — Zeitlin & Zeitlin, P.C.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0A1118; color: #E2E8F0; }
-        h1, h2, h3, h4, .font-serif { font-family: 'Cinzel', serif; }
-        .gold-accent { color: #C5A059; }
-        .gold-bg { background-color: #C5A059; }
-        .gold-border { border-color: #C5A059; }
-        .card-glow:hover { border-color: rgba(197, 160, 89, 0.4); box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.15); }
+        :root {
+            --wachtell-dark: #222222;
+            --wachtell-muted: #595959;
+            --wachtell-border: #CCCCCC;
+            --wachtell-light-bg: #FAFAFA;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'EB Garamond', Garamond, Georgia, serif; color: var(--wachtell-dark); background-color: #FFFFFF; line-height: 1.7; font-size: 19px; }
+        a { color: inherit; text-decoration: none; }
+        a:hover { color: var(--wachtell-muted); text-decoration: underline; }
+
+        header { text-align: center; padding: 4.5rem 1rem 2rem 1rem; background: #FFFFFF; }
+        .firm-logo { font-family: 'EB Garamond', serif; font-size: 2.5rem; font-weight: 600; letter-spacing: 0.08em; color: var(--wachtell-dark); text-transform: uppercase; margin-bottom: 0.3rem; }
+        .firm-location { font-family: 'Inter', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--wachtell-muted); }
+
+        nav { border-top: 2px solid var(--wachtell-dark); border-bottom: 1px solid var(--wachtell-border); margin: 2rem auto; max-width: 900px; background: var(--wachtell-light-bg); position: sticky; top: 0; z-index: 1000; }
+        .nav-links { display: flex; justify-content: center; list-style: none; gap: 2.5rem; padding: 0.9rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--wachtell-dark); }
+        .nav-links a.active { font-weight: 600; text-decoration: underline; }
+
+        main { max-width: 820px; margin: 0 auto; padding: 2rem 1.5rem 5rem 1.5rem; }
+        section { margin-bottom: 4rem; }
+        h2 { font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--wachtell-muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--wachtell-border); padding-bottom: 0.4rem; }
+        p { margin-bottom: 1.2rem; text-align: left; }
+
+        .search-box { width: 100%; padding: 0.75rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.9rem; border: 1px solid var(--wachtell-border); background: var(--wachtell-light-bg); margin-bottom: 2.5rem; outline: none; color: var(--wachtell-dark); }
+        .search-box:focus { border-color: var(--wachtell-dark); }
+
+        .case-item { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #E5E5E5; }
+        .case-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .case-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 0.3rem; flex-wrap: wrap; }
+        .case-title { font-family: 'EB Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--wachtell-dark); }
+        .case-recovery { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--wachtell-dark); }
+        .case-meta { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--wachtell-muted); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .case-desc { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--wachtell-muted); line-height: 1.6; }
+
+        footer { border-top: 1px solid var(--wachtell-border); max-width: 820px; margin: 4rem auto 0 auto; padding: 2.5rem 1.5rem; text-align: center; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--wachtell-muted); background: var(--wachtell-light-bg); }
+        footer p { text-align: center; margin-bottom: 0.5rem; }
+        @media (max-width: 768px) { .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; } }
     </style>
 </head>
-<body class="bg-[#0A1118] text-slate-200 min-h-screen flex flex-col selection:bg-[#C5A059] selection:text-black">
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="border-b border-slate-800/80 bg-[#0A1118]/95 sticky top-0 z-40 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col">
-                <span class="font-serif text-2xl tracking-wider text-white font-bold">ZEITLIN & ZEITLIN</span>
-                <span class="text-[10px] tracking-[0.2em] text-[#C5A059] uppercase font-semibold">P.C. • Eminent Domain & Land Valuation Law</span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
-                <a href="index.html" class="text-slate-300 hover:text-[#C5A059] transition">Home</a>
-                <a href="about.html" class="text-slate-300 hover:text-[#C5A059] transition">Firm Overview</a>
-                <a href="cases.html" class="text-[#C5A059] border-b-2 border-[#C5A059] pb-1 font-semibold">Notable Cases</a>
-                <a href="contact.html" class="text-slate-300 hover:text-[#C5A059] transition">Contact</a>
-            </nav>
-        </div>
+    <header>
+        <div class="firm-logo">Zeitlin & Zeitlin, P.C.</div>
+        <div class="firm-location">Phoenix, Arizona</div>
     </header>
 
-    <!-- Page Title & Intro -->
-    <section class="py-16 px-6 bg-gradient-to-b from-[#101B26] to-[#0A1118] border-b border-slate-800/80">
-        <div class="max-w-6xl mx-auto text-center">
-            <span class="text-[#C5A059] text-xs font-semibold tracking-[0.25em] uppercase mb-3 block">Four Decades of Trial Results</span>
-            <h1 class="text-4xl md:text-5xl font-serif text-white mb-6">Eminent Domain Track Record</h1>
-            <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed mb-10">
-                A comprehensive archive of landmark jury verdicts, Supreme Court precedents, and strategic condemnation settlements achieved by Dale Zeitlin for landowners across Arizona, Maryland, and Federal Courts.
-            </p>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="practice.html">Practice Areas</a></li>
+            <li><a href="attorneys.html">Attorneys</a></li>
+            <li><a href="cases.html" class="active">Cases</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-            <!-- KPI Stats Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                <div class="bg-[#0A1118]/80 border border-slate-800 p-5 rounded-lg text-center">
-                    <div class="text-2xl md:text-3xl font-bold font-serif text-[#C5A059]">$350M+</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Total Recoveries</div>
+    <main>
+        <section>
+            <h2>Representative Eminent Domain Cases & Verdicts</h2>
+            <p>A comprehensive record of landmark jury verdicts, published appellate precedents, and strategic condemnation settlements achieved by Dale Zeitlin against state, municipal, and federal condemning authorities.</p>
+
+            <input type="text" id="searchInput" class="search-box" placeholder="Search by client, city, or agency (e.g., ADOT, Phoenix, SRP)..." onkeyup="filterCases()">
+
+            <div id="casesContainer">
+                <div class="case-item" data-text="city of phoenix cresent 2400 2026 jury trial">
+                    <div class="case-header">
+                        <div class="case-title">City of Phoenix v. Crescent 2400</div>
+                        <div class="case-recovery">$5,700,000 Total Recovery</div>
+                    </div>
+                    <div class="case-meta">2026 Jury Trial • Office Building Condemnation</div>
+                    <div class="case-desc">The City condemned a portion of land from an office building. The City's appraisal was $680,000. The jury awarded nearly $3.8MM, alongside $1.1MM in statutory interest and $765,000 in sanctions against the City for a total recovery of $5,700,000.</div>
                 </div>
-                <div class="bg-[#0A1118]/80 border border-slate-800 p-5 rounded-lg text-center">
-                    <div class="text-2xl md:text-3xl font-bold font-serif text-[#C5A059]">$91.0M</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Record Arizona Verdict</div>
+
+                <div class="case-item" data-text="state of arizona foothills adot 2025 settlement">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Foothills (ADOT)</div>
+                        <div class="case-recovery">$30,500,000+ Total Recovery</div>
+                    </div>
+                    <div class="case-meta">2025 Settlement • Permanent Open Space</div>
+                    <div class="case-desc">ADOT condemned permanent open space owned by a homeowners association, appraising the land at $2,088,000. Settled for $26,500,000 plus over $4,000,000 in statutory interest.</div>
                 </div>
-                <div class="bg-[#0A1118]/80 border border-slate-800 p-5 rounded-lg text-center">
-                    <div class="text-2xl md:text-3xl font-bold font-serif text-[#C5A059]">14.3x</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Peak ADOT Value Increase</div>
+
+                <div class="case-item" data-text="state of arizona jones 2025 industrial land">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Jones</div>
+                        <div class="case-recovery">~$4,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2025 Settlement • Industrial Land</div>
+                    <div class="case-desc">The State condemned industrial land with an ADOT appraisal of $1,500,000. Settled for approximately $4,000,000.</div>
                 </div>
-                <div class="bg-[#0A1118]/80 border border-slate-800 p-5 rounded-lg text-center">
-                    <div class="text-2xl md:text-3xl font-bold font-serif text-[#C5A059]">AZ Supreme Ct</div>
-                    <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Landmark Access Ruling</div>
+
+                <div class="case-item" data-text="city of scottsdale hp inc 2025 residential land">
+                    <div class="case-header">
+                        <div class="case-title">City of Scottsdale v. HP, Inc.</div>
+                        <div class="case-recovery">$5,790,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2025 Settlement • Residential Land</div>
+                    <div class="case-desc">The City condemned residential land appraised at $2,611,879. Settled for $5,790,000.</div>
+                </div>
+
+                <div class="case-item" data-text="city of flagstaff hanson 2025 industrial property">
+                    <div class="case-header">
+                        <div class="case-title">City of Flagstaff v. Hanson</div>
+                        <div class="case-recovery">$1,380,916 Settlement</div>
+                    </div>
+                    <div class="case-meta">2025 Settlement • Industrial Property</div>
+                    <div class="case-desc">The City condemned an old small industrial property without public sewer or paved access (appraised at $869,550). Settled for $1,380,916.</div>
+                </div>
+
+                <div class="case-item" data-text="city of scottsdale toll brothers 2008 jury trial desert preserve">
+                    <div class="case-header">
+                        <div class="case-title">City of Scottsdale v. Toll Brothers</div>
+                        <div class="case-recovery">~$91,000,000 Total Award</div>
+                    </div>
+                    <div class="case-meta">2008 Jury Trial (3 Weeks) • 384 Acres</div>
+                    <div class="case-desc">The City condemned approximately 384 acres for a desert preserve, appraising the property at $33,800,000. The jury awarded nearly $82,000,000 plus over $9,000,000 in statutory interest. <strong>This stands as the largest condemnation verdict in Arizona history.</strong></div>
+                </div>
+
+                <div class="case-item" data-text="city of phoenix garretson 2016 arizona supreme court light rail access">
+                    <div class="case-header">
+                        <div class="case-title">City of Phoenix v. Garretson</div>
+                        <div class="case-recovery">~$4,000,000 Final Judgment</div>
+                    </div>
+                    <div class="case-meta">2016 Arizona Supreme Court Precedent & Jury Trial</div>
+                    <div class="case-desc">Light rail construction eliminated access to Jefferson Street. The City appraised the take at $7,000; the jury awarded nearly $3,000,000. Mr. Zeitlin successfully argued before the Arizona Supreme Court, establishing landmark precedent that property owners hold a constitutionally protected property right of access to a particular street. Briefs and oral arguments handled directly by Mr. Zeitlin.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona liberty fuel adot 2018 truck stop loop 202">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Liberty Fuel (ADOT)</div>
+                        <div class="case-recovery">$21,293,319 Settlement</div>
+                    </div>
+                    <div class="case-meta">2018 Settlement • Truck Stop</div>
+                    <div class="case-desc">ADOT condemned a truck stop for the South Mountain Loop 202 Freeway. State appraisal was $9,550,000; settled for $20,274,000 plus interest for a total of $21,293,319.</div>
+                </div>
+
+                <div class="case-item" data-text="maricopa county stadium district downtown phoenix partners 2000 chase field ball park jury trial">
+                    <div class="case-header">
+                        <div class="case-title">Maricopa County Stadium District v. Downtown Phoenix Partners</div>
+                        <div class="case-recovery">$7,200,000 Total Payment</div>
+                    </div>
+                    <div class="case-meta">2000 Jury Trial (3 Weeks) • Baseball Stadium</div>
+                    <div class="case-desc">Taking of a 2-acre vacant parcel at 6th and Jefferson for Bank One Ballpark. County offered $900,000. After a 3-week jury trial, the jury awarded $4,663,100 (100% of Dale Zeitlin's appraisal). Actual payment reached $7,200,000.</div>
+                </div>
+
+                <div class="case-item" data-text="united states v berman 1990 federal jury trial department of defense maryland">
+                    <div class="case-header">
+                        <div class="case-title">United States v. Berman</div>
+                        <div class="case-recovery">$26,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1990 Federal Jury Trial • US District Court (Maryland)</div>
+                    <div class="case-desc">The US Department of Defense took ~250 acres. Government offer was $7,700,000. After 3 weeks of trial in federal court against the DOJ, the case settled for $26,000,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland cromwell 1994 access valuation">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Cromwell</div>
+                        <div class="case-recovery">~$22,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1994 Pre-Trial Settlement</div>
+                    <div class="case-desc">State SHA offered $10,500,000. Dale Zeitlin settled for ~$22,000,000 focusing on deprivation of value due to loss of access. Handled both trial representation and complete valuation analysis before hiring an expert appraiser.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona benross 2010 loop 303 reversion">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Benross, et al.</div>
+                        <div class="case-recovery">$11,951,288 Buyback Settlement</div>
+                    </div>
+                    <div class="case-meta">2010 Reversion Action • Loop 303</div>
+                    <div class="case-desc">Owners donated land in 1989 for Loop 303. ADOT failed to build in a timely fashion. Mr. Zeitlin successfully argued the land should revert to owners, leading ADOT to pay $11,951,288 to buy back the properties.</div>
+                </div>
+
+                <div class="case-item" data-text="salt river project srp bd218 2024 transmission easement">
+                    <div class="case-header">
+                        <div class="case-title">Salt River Project v. BD218</div>
+                        <div class="case-recovery">$4,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2024 Settlement • Electrical Transmission Easement</div>
+                    <div class="case-desc">SRP offered ~$1,000,000 for a strip of land for an overhead electrical transmission easement; settled for $4,000,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona chrome 2024 vacant land">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Chrome</div>
+                        <div class="case-recovery">$2,950,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2024 Settlement • Vacant Land</div>
+                    <div class="case-desc">State condemned vacant land offering $1,045,000; settled for $2,950,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona williams adot 2018 loop 202 agricultural">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Williams (ADOT)</div>
+                        <div class="case-recovery">$7,084,177 Settlement</div>
+                    </div>
+                    <div class="case-meta">2018 Settlement • Agricultural Land</div>
+                    <div class="case-desc">ADOT appraised vacant agricultural land for $2,338,568; settled for $7,084,177.</div>
+                </div>
+
+                <div class="case-item" data-text="southwest transmission cooperative djl 2020">
+                    <div class="case-header">
+                        <div class="case-title">Southwest Transmission Cooperative v. DJL 2007, LLC</div>
+                        <div class="case-recovery">$1,500,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2020 Pre-Trial Settlement</div>
+                    <div class="case-desc">STC offered $74,700 for overhead transmission lines; settled before trial for $1,500,000.</div>
+                </div>
+
+                <div class="case-item" data-text="city of mesa 1107 e main az llc 2020 light rail">
+                    <div class="case-header">
+                        <div class="case-title">City of Mesa v. 1107 E. Main AZ, LLC</div>
+                        <div class="case-recovery">$1,922,388 Settlement</div>
+                    </div>
+                    <div class="case-meta">2020 Light Rail Settlement</div>
+                    <div class="case-desc">Initial City offer $1,236,500; settled before trial for $1,922,388 for light rail extension.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona gross 2015 south mountain freeway">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. Gross</div>
+                        <div class="case-recovery">$2,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2015 Settlement • South Mountain Freeway</div>
+                    <div class="case-desc">ADOT offered $350,000; settled for $2,000,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona bd218 2017 partial taking">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona v. BD218</div>
+                        <div class="case-recovery">$2,372,398 Total Settlement</div>
+                    </div>
+                    <div class="case-meta">2017 Pre-Trial Settlement</div>
+                    <div class="case-desc">ADOT partial taking appraised at $823,205; settled prior to trial for $2,372,398 including interest.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona canyon oaks adot 2005">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona (ADOT) v. Canyon Oaks</div>
+                        <div class="case-recovery">$15,800,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2005 Settlement • Vacant Land</div>
+                    <div class="case-desc">ADOT appraised vacant land for $7,700,000; settled prior to trial for $15,800,000.</div>
+                </div>
+
+                <div class="case-item" data-text="city of phoenix merrill 2005">
+                    <div class="case-header">
+                        <div class="case-title">City of Phoenix v. Merrill</div>
+                        <div class="case-recovery">$2,260,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2005 Settlement • Leased Fee</div>
+                    <div class="case-desc">City appraised leased fee at $875,000; settled prior to trial for $2,260,000.</div>
+                </div>
+
+                <div class="case-item" data-text="city of peoria airport peoria 2005 jury trial">
+                    <div class="case-header">
+                        <div class="case-title">City of Peoria v. Airport/Peoria</div>
+                        <div class="case-recovery">$3,516,000 Total Compensation</div>
+                    </div>
+                    <div class="case-meta">2005 Jury Trial</div>
+                    <div class="case-desc">City appraised property at $1,325,000. Jury awarded $2,949,813.16, totaling $3,516,000 with interest.</div>
+                </div>
+
+                <div class="case-item" data-text="state of arizona gateway adot 2004 access improvement">
+                    <div class="case-header">
+                        <div class="case-title">State of Arizona (ADOT) v. Gateway</div>
+                        <div class="case-recovery">$13,000,000+ Settlement</div>
+                    </div>
+                    <div class="case-meta">2004 Settlement • Vacant Land & Access</div>
+                    <div class="case-desc">ADOT appraised vacant land at $4,600,000; Dale Zeitlin settled for over $13,000,000 plus ADOT agreement to improve access to remaining property.</div>
+                </div>
+
+                <div class="case-item" data-text="city of scottsdale skyridge 2004 preservation">
+                    <div class="case-header">
+                        <div class="case-title">City of Scottsdale v. Skyridge</div>
+                        <div class="case-recovery">$9,300,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2004 Settlement • 40-Acre Preservation</div>
+                    <div class="case-desc">City appraised 40-acre vacant parcel at $5,000,000; settled prior to trial for $9,300,000.</div>
+                </div>
+
+                <div class="case-item" data-text="city of scottsdale ancala 2004">
+                    <div class="case-header">
+                        <div class="case-title">City of Scottsdale v. Ancala</div>
+                        <div class="case-recovery">$7,600,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2004 Settlement • 24 Acres</div>
+                    <div class="case-desc">City appraised 24-acre parcel at $3,400,000; settled prior to trial for $7,600,000.</div>
+                </div>
+
+                <div class="case-item" data-text="city of glendale brown 2002 pump station">
+                    <div class="case-header">
+                        <div class="case-title">City of Glendale v. Brown</div>
+                        <div class="case-recovery">~$4,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2002 Settlement • Full Parcel Acquisition</div>
+                    <div class="case-desc">City condemned 1.5 acres for a pump station (appraised at $163,900). Dale Zeitlin convinced the City to purchase all of client's property for $4.50/sq ft (~$4,000,000).</div>
+                </div>
+
+                <div class="case-item" data-text="maricopa county stadium district king onion 1995 warehouse">
+                    <div class="case-header">
+                        <div class="case-title">Maricopa County Stadium District v. King Onion</div>
+                        <div class="case-recovery">$6,220,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1995 Settlement • 80-Year-Old Warehouse</div>
+                    <div class="case-desc">County offered $1,800,000 including relocation; settled before trial for $6,220,000.</div>
+                </div>
+
+                <div class="case-item" data-text="united states v pleasant county 1994 federal court">
+                    <div class="case-header">
+                        <div class="case-title">United States v. Pleasant County</div>
+                        <div class="case-recovery">$10,800,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1994 US District Court (District of Arizona)</div>
+                    <div class="case-desc">Federal appraisal was $4,500,000; settled before trial for $10,800,000.</div>
+                </div>
+
+                <div class="case-item" data-text="maricopa county salamandick investments 2000 severance damages">
+                    <div class="case-header">
+                        <div class="case-title">Maricopa County v. Salamandick Investments</div>
+                        <div class="case-recovery">~$5,500,000 Total Payment</div>
+                    </div>
+                    <div class="case-meta">2000 Mediation Settlement • Severance Damages</div>
+                    <div class="case-desc">County offered $450,000 for 25 acres. During mediation, Dale Zeitlin convinced the County that remaining 125 acres were damaged, resulting in total purchase of ~$5,500,000.</div>
+                </div>
+
+                <div class="case-item" data-text="baltimore county meadowood 2002 jury trial maryland">
+                    <div class="case-header">
+                        <div class="case-title">Baltimore County v. Meadowood, Inc.</div>
+                        <div class="case-recovery">~$5,000,000 Judgment</div>
+                    </div>
+                    <div class="case-meta">2002 Jury Trial (1 Week) • 96 Acres</div>
+                    <div class="case-desc">County offered $885,000; jury awarded $4,300,000 (~$5,000,000 with interest).</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland curtis 2001">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Curtis</div>
+                        <div class="case-recovery">$4,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2001 Settlement • 9 Acres</div>
+                    <div class="case-desc">State Highway Administration offered $555,000; settled before trial for $4,000,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland braun 1999 bifurcation severance">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Braun</div>
+                        <div class="case-recovery">$3,200,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1999 Settlement • Highway Bifurcation</div>
+                    <div class="case-desc">State appraised 13 acres at $1,100,000. Dale Zeitlin alleged severance damages from highway bifurcation; settled for $3,200,000.</div>
+                </div>
+
+                <div class="case-item" data-text="adot dr horton 2000 inverse condemnation">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. D.R. Horton</div>
+                        <div class="case-recovery">$1,350,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">2000 Inverse Condemnation Settlement</div>
+                    <div class="case-desc">ADOT acquired access rights contending no compensation was owed; settled before trial for $1,350,000.</div>
+                </div>
+
+                <div class="case-item" data-text="adot cornforth 2000">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Cornforth</div>
+                        <div class="case-recovery">$2,722,657.50 Settlement</div>
+                    </div>
+                    <div class="case-meta">2000 Settlement • 6.2 Acres</div>
+                    <div class="case-desc">ADOT offered $1,452,084; settled on behalf of clients for $2,722,657.50.</div>
+                </div>
+
+                <div class="case-item" data-text="adot dynex bullhead city 2001">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Dynex</div>
+                        <div class="case-recovery">$1,440,609.33 Settlement</div>
+                    </div>
+                    <div class="case-meta">2001 Settlement • Bullhead City</div>
+                    <div class="case-desc">Client tried to settle for $700,000 before hiring Dale Zeitlin (ADOT offered $591,200). Dale Zeitlin settled prior to trial for $1,440,609.33.</div>
+                </div>
+
+                <div class="case-item" data-text="adot cornell 2000">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Cornell</div>
+                        <div class="case-recovery">$1,387,903 Settlement</div>
+                    </div>
+                    <div class="case-meta">2000 Settlement • 15 Acres</div>
+                    <div class="case-desc">ADOT offered $508,500; settled for $1,387,903.</div>
+                </div>
+
+                <div class="case-item" data-text="adot sinfa 2001 de minimus access">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Sinfa</div>
+                        <div class="case-recovery">$94,068.42 Settlement</div>
+                    </div>
+                    <div class="case-meta">2001 Settlement • De Minimus Taking</div>
+                    <div class="case-desc">ADOT took a tiny sliver offering $7,200. Settled prior to trial for $94,068.42 by proving impaired access created severance damages.</div>
+                </div>
+
+                <div class="case-item" data-text="state highway administration mid atlantic builders 2001 jury trial">
+                    <div class="case-header">
+                        <div class="case-title">State Highway Administration v. Mid-Atlantic Builders</div>
+                        <div class="case-recovery">$1,239,000 Total Judgment</div>
+                    </div>
+                    <div class="case-meta">2001 Jury Trial (Prince George's County)</div>
+                    <div class="case-desc">SHA offered $258,000 for 4.5 acres. Jury awarded $1,043,550 plus interest bringing total judgment to $1,239,000.</div>
+                </div>
+
+                <div class="case-item" data-text="maricopa county flood control wagner 1997">
+                    <div class="case-header">
+                        <div class="case-title">Maricopa County Flood Control District v. Wagner</div>
+                        <div class="case-recovery">$2,300,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1997 Pre-Trial Settlement</div>
+                    <div class="case-desc">Flood Control District appraised Gila River land at $702,000; settled prior to jury selection for $2,300,000.</div>
+                </div>
+
+                <div class="case-item" data-text="maricopa county flood control hintze inverse">
+                    <div class="case-header">
+                        <div class="case-title">Maricopa County Flood Control District v. Hintze</div>
+                        <div class="case-recovery">$800,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">Inverse Condemnation Settlement</div>
+                    <div class="case-desc">District initially argued it owed nothing; case ultimately settled for $800,000.</div>
+                </div>
+
+                <div class="case-item" data-text="united states inn at antietam 1997 jury trial bed and breakfast baltimore">
+                    <div class="case-header">
+                        <div class="case-title">United States v. The Inn at Antietam</div>
+                        <div class="case-recovery">$792,000 Jury Verdict</div>
+                    </div>
+                    <div class="case-meta">1997 Federal Jury Trial (Baltimore)</div>
+                    <div class="case-desc">United States condemned a bed and breakfast offering $80,000; federal jury verdict returned $792,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland park 100 1996">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Park 100 Limited Partnership</div>
+                        <div class="case-recovery">$6,289,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1996 Settlement • Anne Arundel County</div>
+                    <div class="case-desc">SHA appraised 16 industrial acres at $789,000; settled for $6,289,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland konterra 1995 industrial access">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Konterra</div>
+                        <div class="case-recovery">$4,100,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1995 Settlement • Industrial Land</div>
+                    <div class="case-desc">SHA valued 20 acres at $400,000 with no severance damages. Settled for $4,100,000 with State agreement to build access into remaining property.</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland vogel farm 1995">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Vogel Farm Partnership</div>
+                        <div class="case-recovery">$1,950,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1995 Settlement • Residential Land</div>
+                    <div class="case-desc">Highway Administration valued 7 acres at $197,050 with no severance damages; settled for $1,950,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state of maryland seven oaks 1991">
+                    <div class="case-header">
+                        <div class="case-title">State of Maryland v. Seven Oaks</div>
+                        <div class="case-recovery">$7,800,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1991 Settlement • Annapolis</div>
+                    <div class="case-desc">SHA originally offered $1,300,000 for 30 acres; settled just before trial for $7,800,000.</div>
+                </div>
+
+                <div class="case-item" data-text="state highway administration legum 1993 annapolis">
+                    <div class="case-header">
+                        <div class="case-title">State Highway Administration v. Legum</div>
+                        <div class="case-recovery">~$9,800,000 Total Settlement</div>
+                    </div>
+                    <div class="case-meta">1993 Settlement • Annapolis</div>
+                    <div class="case-desc">SHA offered $3,500,000. Settled on eve of trial for $8,800,000 plus additional land valued at ~$1,000,000 (~$9.8MM total).</div>
+                </div>
+
+                <div class="case-item" data-text="hopi tribe navajo nation 1992 federal bench trials">
+                    <div class="case-header">
+                        <div class="case-title">The Hopi Tribe v. Navajo Nation</div>
+                        <div class="case-recovery">Claims Reduced by $137,000,000</div>
+                    </div>
+                    <div class="case-meta">1992 Federal Bench Trials (4 Weeks) • US District Court (AZ)</div>
+                    <div class="case-desc">Three consolidated cases originally filed in 1979. Zeitlin & Zeitlin hired by Navajos in 1990. Hopi claims of ~$200MM were successfully reduced to ~$63MM prior to trial.</div>
+                </div>
+
+                <div class="case-item" data-text="adot valley citrus 1986">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Valley Citrus</div>
+                        <div class="case-recovery">$10,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1986 Settlement • 83rd Ave & Bell Road</div>
+                    <div class="case-desc">ADOT offered $6,000,000; Dale Zeitlin settled for $10,000,000.</div>
+                </div>
+
+                <div class="case-item" data-text="adot tang 1988 1989 beardsley i 17">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Tang</div>
+                        <div class="case-recovery">~$6,600,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1988-1989 Settlement • Beardsley & I-17</div>
+                    <div class="case-desc">ADOT offered ~$3,250,000; settled for ~$6,600,000.</div>
+                </div>
+
+                <div class="case-item" data-text="adot gte 1988 1989">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. GTE</div>
+                        <div class="case-recovery">$1,800,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">1988-1989 Settlement</div>
+                    <div class="case-desc">ADOT offered $900,000; settled for $1,800,000.</div>
+                </div>
+
+                <div class="case-item" data-text="adot intel">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Intel</div>
+                        <div class="case-recovery">~$6,000,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">Settlement</div>
+                    <div class="case-desc">ADOT offered ~$3,000,000; settled for ~$6,000,000.</div>
+                </div>
+
+                <div class="case-item" data-text="adot royal palms apartments">
+                    <div class="case-header">
+                        <div class="case-title">Arizona Department of Transportation v. Royal Palms Apartments</div>
+                        <div class="case-recovery">$1,900,000 Settlement</div>
+                    </div>
+                    <div class="case-meta">Settlement</div>
+                    <div class="case-desc">ADOT offered $900,000; settled for $1,900,000.</div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Controls Bar (Search + Filter) -->
-    <section class="max-w-7xl mx-auto px-6 pt-10 pb-4">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-[#101B26] p-4 rounded-xl border border-slate-800">
-            <div class="relative w-full md:w-96">
-                <input type="text" id="searchInput" onkeyup="filterCases()" placeholder="Search client, city, or agency (e.g. ADOT, Phoenix, SRP)..." class="w-full bg-[#0A1118] border border-slate-700 text-slate-200 text-sm rounded-lg px-4 py-2.5 pl-10 focus:outline-none focus:border-[#C5A059]">
-                <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            </div>
-            <div class="flex items-center space-x-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 text-xs">
-                <button onclick="setCategory('all')" id="cat-all" class="cat-btn px-4 py-2 rounded-lg bg-[#C5A059] text-black font-semibold transition">All Cases</button>
-                <button onclick="setCategory('az')" id="cat-az" class="cat-btn px-4 py-2 rounded-lg bg-[#0A1118] border border-slate-700 text-slate-300 hover:text-[#C5A059] transition">Arizona</button>
-                <button onclick="setCategory('md')" id="cat-md" class="cat-btn px-4 py-2 rounded-lg bg-[#0A1118] border border-slate-700 text-slate-300 hover:text-[#C5A059] transition">Maryland / Fed</button>
-                <button onclick="setCategory('jury')" id="cat-jury" class="cat-btn px-4 py-2 rounded-lg bg-[#0A1118] border border-slate-700 text-slate-300 hover:text-[#C5A059] transition">Jury Trials</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Grid of Cases -->
-    <main class="flex-grow max-w-7xl mx-auto px-6 py-8 w-full">
-        <div id="casesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Cases render dynamically via JS below -->
-        </div>
-        <div id="noResults" class="hidden text-center py-16 text-slate-400">
-            No matching cases found for your query. Try searching by city, state, or client name.
-        </div>
+        </section>
     </main>
 
-    <!-- Case Detail Modal -->
-    <div id="caseModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-[#101B26] border border-[#C5A059]/40 rounded-xl max-w-2xl w-full p-8 relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl">&times;</button>
-            <span id="mType" class="text-xs uppercase tracking-widest text-[#C5A059] font-semibold block mb-1"></span>
-            <h3 id="mTitle" class="text-2xl font-serif text-white mb-4"></h3>
-            
-            <div class="grid grid-cols-2 gap-4 bg-[#0A1118] p-4 rounded-lg border border-slate-800 mb-6">
-                <div>
-                    <span class="text-xs text-slate-400 block">Condemning Appraisal / Offer</span>
-                    <span id="mOffer" class="text-lg font-semibold text-rose-400"></span>
-                </div>
-                <div>
-                    <span class="text-xs text-slate-400 block">Total Recovery / Verdict</span>
-                    <span id="mRecovery" class="text-lg font-bold text-emerald-400"></span>
-                </div>
-            </div>
-
-            <p id="mDesc" class="text-slate-300 text-sm leading-relaxed mb-6"></p>
-
-            <div class="flex justify-end">
-                <button onclick="closeModal()" class="px-6 py-2.5 bg-[#C5A059] text-black font-semibold text-sm rounded-lg hover:bg-[#d6b26b] transition">Close Case File</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-[#070C12] border-t border-slate-800/80 py-12 px-6 mt-16 text-center text-xs text-slate-500">
-        <p class="mb-2 font-serif text-slate-400 text-sm">Zeitlin & Zeitlin, P.C.</p>
-        <p>&copy; 2026 Zeitlin & Zeitlin, P.C. All rights reserved. Commercial Real Estate Finance & Eminent Domain Litigation.</p>
+    <footer>
+        <p>&copy; 1993–2026 Zeitlin & Zeitlin, P.C. All rights reserved.</p>
+        <p>Attorney Advertising. The information presented on this website is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Prior results do not guarantee a similar outcome.</p>
     </footer>
 
-    <!-- Complete Case Data & Interactive Scripts -->
     <script>
-        const casesData = [
-            {
-                title: "City of Phoenix v. Crescent 2400",
-                year: "2026",
-                type: "Jury Trial Verdict",
-                cat: "az jury",
-                offer: "$680,000",
-                recovery: "$5,700,000",
-                desc: "The City condemned a portion of land from an office building. The City's appraisal was about $680,000. The jury awarded nearly $3.8MM. We also received $1.1MM in interest and sanctions against the City in the amount of $765,000 for a total recovery of $5,700,000."
-            },
-            {
-                title: "State of Arizona v. Foothills",
-                year: "2025",
-                type: "Settlement",
-                cat: "az",
-                offer: "$2,088,000",
-                recovery: "$30,500,000+",
-                desc: "The State of Arizona (ADOT) condemned permanent open space owned by a homeowner's association. The State appraised the land for $2,088,000, and we settled for $26,500,000, plus over $4,000,000 in interest for a total recovery in excess of $30,000,000."
-            },
-            {
-                title: "State of Arizona v. Jones",
-                year: "2025",
-                type: "Settlement",
-                cat: "az",
-                offer: "$1,500,000",
-                recovery: "$4,000,000",
-                desc: "The State condemned industrial land. ADOT's appraisal was $1,500,000 and we settled for about $4,000,000."
-            },
-            {
-                title: "City of Scottsdale v. HP, Inc.",
-                year: "2025",
-                type: "Settlement",
-                cat: "az",
-                offer: "$2,611,879",
-                recovery: "$5,790,000",
-                desc: "The City condemned residential land. The City's appraisal was $2,611,879. We settled for $5,790,000."
-            },
-            {
-                title: "City of Flagstaff v. Hanson",
-                year: "2025",
-                type: "Settlement",
-                cat: "az",
-                offer: "$869,550",
-                recovery: "$1,380,916",
-                desc: "The City condemned an old small industrial property that did not have public sewer or paved access. The City appraised the property for $869,550. We settled for $1,380,916."
-            },
-            {
-                title: "State of Arizona v. Liberty Fuel",
-                year: "2018",
-                type: "Settlement",
-                cat: "az",
-                offer: "$9,550,000",
-                recovery: "$21,293,319",
-                desc: "ADOT condemned a truck stop for the South Mountain Loop 202 Freeway. The State's appraisal was $9,550,000. We settled for $20,274,000 plus interest for a total settlement of $21,293,319."
-            },
-            {
-                title: "Salt River Project v. BD218",
-                year: "2024",
-                type: "Settlement",
-                cat: "az",
-                offer: "$1,000,000",
-                recovery: "$4,000,000",
-                desc: "SRP condemned a strip of land for an overhead electrical transmission easement. SRP offered approximately $1,000,000 and we settled for $4,000,000."
-            },
-            {
-                title: "State of Arizona v. Chrome",
-                year: "2024",
-                type: "Settlement",
-                cat: "az",
-                offer: "$1,045,000",
-                recovery: "$2,950,000",
-                desc: "The State of Arizona condemned vacant land and offered $1,045,000 and we settled for $2,950,000."
-            },
-            {
-                title: "State of Arizona v. Williams",
-                year: "2018",
-                type: "Settlement",
-                cat: "az",
-                offer: "$2,338,568",
-                recovery: "$7,084,177",
-                desc: "ADOT condemned vacant agricultural land for the Loop 202 Freeway. ADOT appraised the property for $2,338,568, and we settled for $7,084,177."
-            },
-            {
-                title: "Southwest Transmission Cooperative v. DJL 2007",
-                year: "2020",
-                type: "Settlement",
-                cat: "az",
-                offer: "$74,700",
-                recovery: "$1,500,000",
-                desc: "STC condemned strips of land for overhead transmission lines. STC originally offered $74,700. We settled for $1,500,000 before trial (a 20x recovery)."
-            },
-            {
-                title: "City of Mesa v. 1107 E. Main AZ, LLC",
-                year: "2020",
-                type: "Light Rail Case Settlement",
-                cat: "az",
-                offer: "$1,236,500",
-                recovery: "$1,922,388",
-                desc: "The City of Mesa condemned a portion of property for the extension of light rail through Mesa. Initial offer was $1,236,500. Settled before trial for $1,922,388."
-            },
-            {
-                title: "State of Arizona v. Gross",
-                year: "2015",
-                type: "Settlement",
-                cat: "az",
-                offer: "$350,000",
-                recovery: "$2,000,000",
-                desc: "Taking by the State for the South Mountain Freeway. ADOT offered $350,000. Settled for $2,000,000."
-            },
-            {
-                title: "State of Arizona v. BD218 (Loop 202)",
-                year: "2017",
-                type: "Settlement",
-                cat: "az",
-                offer: "$823,205",
-                recovery: "$2,372,398",
-                desc: "Partial taking of land by ADOT. ADOT appraised the property for $823,205. Settled prior to trial for $2,372,398 including interest."
-            },
-            {
-                title: "City of Phoenix v. Garretson",
-                year: "2016",
-                type: "AZ Supreme Court Precedent & Jury Trial",
-                cat: "az jury",
-                offer: "$7,000",
-                recovery: "$4,000,000",
-                desc: "Light rail taking eliminating Jefferson Street access. City appraised land taken for $7,000. Jury awarded nearly $3,000,000 ($4,000,000 with interest). Prior to trial, Mr. Zeitlin argued before the Arizona Supreme Court, establishing landmark precedent that landowners hold a constitutionally protected property right to access specific streets."
-            },
-            {
-                title: "City of Scottsdale v. Toll Brothers",
-                year: "2008",
-                type: "Jury Trial Verdict (Record)",
-                cat: "az jury",
-                offer: "$33,800,000",
-                recovery: "$91,000,000",
-                desc: "Condemnation of 384 acres for desert preserve. City appraised at $33.8MM. Following a 3-week trial, jury awarded $82,000,000 plus $9MM+ in interest for a total of $91,000,000. Represents the largest condemnation verdict in Arizona history."
-            },
-            {
-                title: "State of Arizona v. Benross, et al.",
-                year: "2010",
-                type: "Inverse Condemnation / Reversion",
-                cat: "az",
-                offer: "$0 (Reclaimed Land)",
-                recovery: "$11,951,288",
-                desc: "Property owners donated land in 1989 for Loop 303 construction. ADOT failed to build in a timely manner. Mr. Zeitlin successfully argued the land reverted back to original owners. ADOT subsequently paid $11,951,288 to buy back the property."
-            },
-            {
-                title: "State of Arizona (ADOT) v. Canyon Oaks",
-                year: "2005",
-                type: "Settlement",
-                cat: "az",
-                offer: "$7,700,000",
-                recovery: "$15,800,000",
-                desc: "Eminent domain action for vacant land appraised by ADOT at $7,700,000. Settled prior to trial for $15,800,000."
-            },
-            {
-                title: "City of Phoenix v. Merrill",
-                year: "2005",
-                type: "Settlement",
-                cat: "az",
-                offer: "$875,000",
-                recovery: "$2,260,000",
-                desc: "City of Phoenix appraised leased fee at $875,000. Settled prior to trial for $2,260,000."
-            },
-            {
-                title: "City of Peoria v. Airport/Peoria",
-                year: "2005",
-                type: "Jury Trial Verdict",
-                cat: "az jury",
-                offer: "$1,325,000",
-                recovery: "$3,516,000",
-                desc: "City appraised property at $1,325,000. Tried to a jury resulting in an award of $2,949,813. Total compensation with interest equaled $3,516,000."
-            },
-            {
-                title: "State of Arizona (ADOT) v. Gateway",
-                year: "2004",
-                type: "Settlement",
-                cat: "az",
-                offer: "$4,600,000",
-                recovery: "$13,000,000+",
-                desc: "ADOT appraised vacant land for $4,600,000. Settled prior to trial for over $13,000,000 plus ADOT agreement to construct improved access to client's remaining land."
-            },
-            {
-                title: "City of Scottsdale v. Skyridge",
-                year: "2004",
-                type: "Settlement",
-                cat: "az",
-                offer: "$5,000,000",
-                recovery: "$9,300,000",
-                desc: "Condemnation of 40-acre parcel for preservation project. City appraised at $5,000,000; settled before trial for $9,300,000."
-            },
-            {
-                title: "City of Scottsdale v. Ancala",
-                year: "2004",
-                type: "Settlement",
-                cat: "az",
-                offer: "$3,400,000",
-                recovery: "$7,600,000",
-                desc: "Condemnation of 24 acres of vacant land. City appraised at $3,400,000. Settled prior to trial for $7,600,000."
-            },
-            {
-                title: "City of Glendale v. Brown",
-                year: "2002",
-                type: "Settlement",
-                cat: "az",
-                offer: "$163,900",
-                recovery: "$4,000,000",
-                desc: "Glendale condemned 1.5 acres for a pump station, appraising at $163,900. Dale Zeitlin convinced the City to acquire the full property parcel for $4,000,000."
-            },
-            {
-                title: "Maricopa County Stadium District v. Downtown Phoenix Partners",
-                year: "2000",
-                type: "Jury Trial Verdict",
-                cat: "az jury",
-                offer: "$900,000",
-                recovery: "$7,200,000",
-                desc: "Taking of 2 acres for Bank One Ballpark (Chase Field). County offered $900,000. Following a 3-week jury trial, jury awarded 100% of Dale Zeitlin's appraisal ($4,663,100), with total payment reaching $7,200,000."
-            },
-            {
-                title: "Maricopa County Stadium District v. King Onion",
-                year: "1995",
-                type: "Settlement",
-                cat: "az",
-                offer: "$1,800,000",
-                recovery: "$6,220,000",
-                desc: "Condemnation of 80-year-old downtown warehouse for baseball stadium. Initial offer was $1,800,000; settled prior to trial for $6,220,000."
-            },
-            {
-                title: "United States v. Pleasant County",
-                year: "1994",
-                type: "Federal District Court Settlement",
-                cat: "md",
-                offer: "$4,500,000",
-                recovery: "$10,800,000",
-                desc: "Federal eminent domain action in US District Court (District of Arizona). Federal appraisal was $4.5MM; settled before trial for $10.8MM."
-            },
-            {
-                title: "Maricopa County v. Salamandick Investments",
-                year: "2000",
-                type: "Mediation Settlement",
-                cat: "az",
-                offer: "$450,000",
-                recovery: "$5,500,000",
-                desc: "Taking of 25 acres from 150-acre parcel for parkway. County offered $450,000. During mediation, Mr. Zeitlin proved severe severance damages to remaining 125 acres, securing $5.5MM total purchase."
-            },
-            {
-                title: "United States v. Berman",
-                year: "1990",
-                type: "Federal Jury Trial Settlement",
-                cat: "md jury",
-                offer: "$7,700,000",
-                recovery: "$26,000,000",
-                desc: "US Department of Defense taking of 250 acres tried in US District Court in Maryland. Government offer was $7.7MM. After 3 weeks of jury trial, settled for $26,000,000."
-            },
-            {
-                title: "Baltimore County v. Meadowood, Inc.",
-                year: "2002",
-                type: "Jury Trial Verdict",
-                cat: "md jury",
-                offer: "$885,000",
-                recovery: "$5,000,000",
-                desc: "Baltimore County condemned 96 acres and offered $885,000. After a 1-week jury trial, jury awarded $4.3MM ($5.0MM total judgment with interest)."
-            },
-            {
-                title: "State of Maryland v. Curtis",
-                year: "2001",
-                type: "Settlement",
-                cat: "md",
-                offer: "$555,000",
-                recovery: "$4,000,000",
-                desc: "State Highway Administration condemned 9 acres and offered $555,000. Settled before trial for $4,000,000."
-            },
-            {
-                title: "State of Maryland v. Braun",
-                year: "1999",
-                type: "Severance Damage Settlement",
-                cat: "md",
-                offer: "$1,100,000",
-                recovery: "$3,200,000",
-                desc: "Taking of 13 acres from 52-acre parcel for highway. SHA appraised at $1.1MM. Dale Zeitlin established substantial bifurcation severance damages, settling for $3.2MM."
-            },
-            {
-                title: "ADOT v. D.R. Horton",
-                year: "2000",
-                type: "Inverse Condemnation Settlement",
-                cat: "az",
-                offer: "$0 (Denied Liability)",
-                recovery: "$1,350,000",
-                desc: "ADOT acquired access rights from vacant land, contending no compensation was owed. Settled before trial for $1,350,000."
-            },
-            {
-                title: "State of Maryland v. Cromwell",
-                year: "1994",
-                type: "Pre-Trial Settlement",
-                cat: "md",
-                offer: "$10,500,000",
-                recovery: "$22,000,000",
-                desc: "State Highway Administration offered $10.5MM. Dale Zeitlin handled trial litigation and valuation analysis directly, securing $22,000,000 before hiring an expert appraiser."
-            },
-            {
-                title: "The Hopi Tribe v. Navajo Nation",
-                year: "1992",
-                type: "Federal Bench Trials",
-                cat: "az",
-                offer: "$200,000,000 (Claim)",
-                recovery: "Reduced by $137M",
-                desc: "4-week trial in US District Court involving consolidated cases filed in 1979. Hired by Navajo Nation in 1990, Mr. Zeitlin successfully defeated $137MM of Hopi land claims prior to trial."
-            }
-        ];
-
-        let activeCategory = 'all';
-
-        function renderCases(cases) {
-            const grid = document.getElementById('casesGrid');
-            const noRes = document.getElementById('noResults');
-            grid.innerHTML = '';
-
-            if (cases.length === 0) {
-                noRes.classList.remove('hidden');
-                return;
-            } else {
-                noRes.classList.add('hidden');
-            }
-
-            cases.forEach((c, idx) => {
-                const card = document.createElement('div');
-                card.className = "bg-[#101B26] border border-slate-800 rounded-xl p-6 flex flex-col justify-between card-glow transition cursor-pointer";
-                card.onclick = () => openModal(c);
-
-                card.innerHTML = `
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-[11px] uppercase tracking-wider text-[#C5A059] font-semibold">${c.type} (${c.year})</span>
-                            <span class="text-xs bg-[#0A1118] text-slate-400 px-2 py-1 rounded border border-slate-800">${c.cat.includes('az') ? 'AZ' : 'MD/FED'}</span>
-                        </div>
-                        <h3 class="text-xl font-serif text-white font-bold mb-3">${c.title}</h3>
-                        <p class="text-slate-400 text-xs line-clamp-3 leading-relaxed mb-6">${c.desc}</p>
-                    </div>
-                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between mt-auto">
-                        <div>
-                            <span class="text-[10px] text-slate-500 uppercase block">Initial Offer</span>
-                            <span class="text-sm font-medium text-rose-400/90">${c.offer}</span>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-[10px] text-slate-500 uppercase block">Total Recovery</span>
-                            <span class="text-base font-bold text-emerald-400">${c.recovery}</span>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
         function filterCases() {
             const query = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = casesData.filter(c => {
-                const matchesQuery = c.title.toLowerCase().includes(query) || c.desc.toLowerCase().includes(query) || c.type.toLowerCase().includes(query);
-                const matchesCat = activeCategory === 'all' || c.cat.includes(activeCategory);
-                return matchesQuery && matchesCat;
+            const items = document.querySelectorAll('.case-item');
+            
+            items.forEach(item => {
+                const text = item.getAttribute('data-text').toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
             });
-            renderCases(filtered);
         }
-
-        function setCategory(cat) {
-            activeCategory = cat;
-            document.querySelectorAll('.cat-btn').forEach(btn => {
-                btn.className = "cat-btn px-4 py-2 rounded-lg bg-[#0A1118] border border-slate-700 text-slate-300 hover:text-[#C5A059] transition";
-            });
-            const activeBtn = document.getElementById('cat-' + cat);
-            if(activeBtn) {
-                activeBtn.className = "cat-btn px-4 py-2 rounded-lg bg-[#C5A059] text-black font-semibold transition";
-            }
-            filterCases();
-        }
-
-        function openModal(c) {
-            document.getElementById('mType').innerText = `${c.type} (${c.year})`;
-            document.getElementById('mTitle').innerText = c.title;
-            document.getElementById('mOffer').innerText = c.offer;
-            document.getElementById('mRecovery').innerText = c.recovery;
-            document.getElementById('mDesc').innerText = c.desc;
-            document.getElementById('caseModal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('caseModal').classList.add('hidden');
-        }
-
-        // Initial Render
-        renderCases(casesData);
     </script>
 </body>
 </html>
