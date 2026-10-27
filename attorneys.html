@@ -42,6 +42,25 @@
             margin-bottom: 0; 
             padding-bottom: 0; 
         }
+        
+        .bio-header {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .bio-photo {
+            width: 200px;
+            height: auto;
+            border: 1px solid var(--wachtell-border);
+            filter: grayscale(100%);
+            flex-shrink: 0;
+            margin-top: 0.3rem;
+        }
+        .bio-info {
+            flex-grow: 1;
+        }
+
         .bio-name { 
             font-family: 'EB Garamond', serif; 
             font-size: 1.6rem; 
@@ -55,7 +74,6 @@
             text-transform: uppercase; 
             letter-spacing: 0.2em; 
             color: var(--wachtell-muted); 
-            margin-bottom: 1.5rem; 
         }
         .bio-credentials {
             font-family: 'Inter', sans-serif;
@@ -73,7 +91,12 @@
 
         footer { border-top: 1px solid var(--wachtell-border); max-width: 820px; margin: 4rem auto 0 auto; padding: 2.5rem 1.5rem; text-align: center; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: var(--wachtell-muted); background: var(--wachtell-light-bg); }
         footer p { text-align: center; margin-bottom: 0.5rem; }
-        @media (max-width: 768px) { .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; } }
+        
+        @media (max-width: 768px) { 
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; } 
+            .bio-header { flex-direction: column; }
+            .bio-photo { width: 100%; max-width: 240px; margin: 0 auto 1rem auto; }
+        }
     </style>
 </head>
 <body>
@@ -87,6 +110,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Overview</a></li>
             <li><a href="practice.html">Practice Areas</a></li>
+            <li><a href="cases.html">Cases</a></li>
             <li><a href="attorneys.html" class="active">Attorneys</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -100,8 +124,13 @@
 
             <!-- DALE S. ZEITLIN -->
             <div class="bio-container">
-                <div class="bio-name">Dale S. Zeitlin</div>
-                <div class="bio-title">Founding Principal</div>
+                <div class="bio-header">
+                    <img src="dale-zeitlin-bw.jpg" alt="Dale S. Zeitlin" class="bio-photo">
+                    <div class="bio-info">
+                        <div class="bio-name">Dale S. Zeitlin</div>
+                        <div class="bio-title">Founding Principal</div>
+                    </div>
+                </div>
                 
                 <p>Dale Zeitlin has extensive experience in eminent domain and valuation litigation in Arizona, Maryland, the District of Columbia, and California. He specializes in representing property owners who are being deprived of their property rights through condemnation or eminent domain and in other disputes over the valuation and taking of real property, including litigation over the value of real property in deficiency actions and in appraisal malpractice cases.</p>
                 
